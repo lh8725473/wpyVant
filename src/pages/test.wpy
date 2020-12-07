@@ -1,0 +1,36 @@
+<style lang="less">
+</style>
+<template>
+  <div class="container">
+    <van-button bindtap="mytestClick" type="primary">按钮</van-button>
+    {{mytest}}
+  </div>  
+</template>
+
+<script>
+import wepy from '@wepy/core'
+
+wepy.page({
+  config: {
+    navigationBarTitleText: 'test'
+  },
+  data: {
+    mytest: 'mytest111'
+  },
+  methods: {
+    mytestClick() {
+      console.log('mytestClick')
+    }
+  }
+})
+
+</script>
+
+<config>
+{
+    navigationBarTitleText: 'mytest',
+    usingComponents: {
+      "van-button": "module:@vant/weapp/dist/button/index",
+    }
+}
+</config>
